@@ -3,8 +3,28 @@ import Header from "@/components/Header"
 import RotatingTextAccent from "@/components/RotatingTextAccent"
 import Footer from "@/components/Footer"
 import HeroTextOverlay from "@/components/HeroTextOverlay"
+import Icon from "@/components/ui/icon"
 
-const CDN_BASE = "https://cdn.poehali.dev/templates/meet-jack"
+const services = [
+  {
+    icon: "ShieldCheck",
+    title: "Дезинфекция",
+    description: "Уничтожение патогенных микроорганизмов, вирусов и бактерий. Обработка поверхностей, воздуха и систем вентиляции сертифицированными препаратами.",
+    tags: ["Квартиры", "Офисы", "Медучреждения"],
+  },
+  {
+    icon: "Bug",
+    title: "Дезинсекция",
+    description: "Избавляем от тараканов, клопов, муравьёв, комаров и других насекомых. Применяем безопасные методы с длительным защитным эффектом.",
+    tags: ["Жилые дома", "Рестораны", "Склады"],
+  },
+  {
+    icon: "Rat",
+    title: "Дератизация",
+    description: "Полное уничтожение грызунов — крыс и мышей. Профессиональные приманки и ловушки, закрытие путей проникновения, контрольные выезды.",
+    tags: ["Производства", "Склады", "Частные дома"],
+  },
+]
 
 const Index = () => {
   return (
@@ -17,8 +37,9 @@ const Index = () => {
           <RotatingTextAccent />
         </main>
 
+        {/* About section */}
         <section
-          className="relative rounded-4xl py-7 mx-4 md:mx-0 w-[calc(100%-2rem)] md:w-full bg-card border border-solid border-border pb-20"
+          className="relative rounded-4xl py-7 mx-4 md:mx-0 w-[calc(100%-2rem)] md:w-full bg-card border border-solid border-border pb-12"
           style={{
             backgroundImage: `
               linear-gradient(var(--border) 1px, transparent 1px),
@@ -27,34 +48,12 @@ const Index = () => {
             backgroundSize: "40px 40px",
           }}
         >
-          <div className="absolute top-8 left-8 text-foreground opacity-50 text-5xl font-extralight font-sans leading-[0rem]">
-            +
-          </div>
-          <div className="absolute top-8 right-8 text-foreground opacity-50 text-5xl font-sans leading-[0] font-extralight">
-            +
-          </div>
-          <div className="absolute bottom-8 left-8 text-foreground opacity-50 text-5xl font-sans font-extralight">
-            +
-          </div>
-          <div className="absolute bottom-8 right-8 text-foreground opacity-50 text-5xl font-sans font-extralight">
-            +
-          </div>
+          <div className="absolute top-8 left-8 text-foreground opacity-50 text-5xl font-extralight font-sans leading-[0rem]">+</div>
+          <div className="absolute top-8 right-8 text-foreground opacity-50 text-5xl font-sans leading-[0] font-extralight">+</div>
+          <div className="absolute bottom-8 left-8 text-foreground opacity-50 text-5xl font-sans font-extralight">+</div>
+          <div className="absolute bottom-8 right-8 text-foreground opacity-50 text-5xl font-sans font-extralight">+</div>
 
-          <div className="px-6 md:px-40">
-            <div className="flex items-center justify-center mb-3.5 md:gap-11">
-              <div className="flex flex-col items-center">
-                <img src={`${CDN_BASE}/jack-front.png`} alt="Макс спереди" className="w-48 h-48 md:w-56 md:h-56 object-contain" />
-              </div>
-
-              <div className="flex flex-col items-center">
-                <img src={`${CDN_BASE}/jack-side.png`} alt="Макс сбоку" className="w-48 h-48 md:w-56 md:h-56 object-contain" />
-              </div>
-
-              <div className="flex flex-col items-center">
-                <img src={`${CDN_BASE}/jack-back.png`} alt="Макс сзади" className="w-48 h-48 md:w-56 md:h-56 object-contain" />
-              </div>
-            </div>
-
+          <div className="px-6 md:px-16 pt-6">
             <div className="flex flex-col gap-2 max-w-5xl">
               <div className="flex items-center gap-4">
                 <span className="text-accent font-mono text-sm">Компания</span>
@@ -71,6 +70,42 @@ const Index = () => {
                 </span>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Services section */}
+        <section className="px-4 md:px-0 py-16">
+          <div className="mb-10">
+            <span className="text-accent font-mono text-sm">Наши услуги</span>
+            <h2 className="text-foreground text-3xl md:text-4xl font-bold mt-2" style={{ fontFamily: "var(--font-montserrat)" }}>
+              Полный цикл санитарной защиты
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="relative rounded-3xl p-7 bg-card border border-border flex flex-col gap-4 hover:border-accent transition-colors duration-300"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-accent/10 border border-accent/20">
+                  <Icon name={service.icon as "ShieldCheck"} size={24} className="text-accent" />
+                </div>
+                <h3 className="text-foreground text-xl font-bold" style={{ fontFamily: "var(--font-montserrat)" }}>
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground font-mono text-sm leading-relaxed flex-1">
+                  {service.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {service.tags.map((tag) => (
+                    <span key={tag} className="text-xs font-mono px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </div>
