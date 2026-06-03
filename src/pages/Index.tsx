@@ -60,14 +60,14 @@ const Index = () => {
                 <span className="text-accent font-mono text-sm">Компания</span>
                 <span className="text-foreground font-mono text-sm">Геометрия чистоты</span>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-start gap-4">
                 <span className="text-accent font-mono text-sm">Услуги</span>
-                <span className="text-foreground font-mono text-sm">Квартиры, офисы, коммерческие помещения</span>
+                <span className="text-foreground font-mono text-sm">Дезинфекция · Дезинсекция · Дератизация</span>
               </div>
               <div className="flex items-start gap-4">
                 <span className="text-accent font-mono text-sm">О нас</span>
                 <span className="text-foreground font-mono text-sm">
-                  Мы превращаем уборку в искусство. Каждое помещение — это геометрия пространства, которую мы доводим до совершенства: точно, аккуратно и с заботой о деталях.
+                  Уничтожаем патогены, насекомых и грызунов с применением сертифицированных препаратов. Работаем с жилыми, коммерческими и производственными объектами. Точно, безопасно, с гарантией результата.
                 </span>
               </div>
             </div>

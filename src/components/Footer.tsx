@@ -16,17 +16,17 @@ export default function Footer() {
               className="text-foreground text-4xl md:text-5xl mb-8 leading-[3.5rem] md:leading-[4rem] font-semibold text-center md:text-left mt-0"
               style={{ fontFamily: "var(--font-montserrat)" }}
             >
-              Чистота — это точность.
+              Ваша защита — наша точность.
             </h2>
 
             <div className="space-y-4 text-foreground">
               <div className="flex items-start gap-3">
                 <span className="text-accent mt-1">*</span>
-                <p className="text-sm">Каждая уборка — это выверенный процесс: от угла к углу, от поверхности к поверхности.</p>
+                <p className="text-sm">Работаем с жилыми домами, ресторанами, складами и производствами — любыми объектами, где важна санитарная безопасность.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-accent mt-1">*</span>
-                <p className="text-sm">Наша миссия — создавать пространство, в котором приятно жить и работать.</p>
+                <p className="text-sm">Используем только сертифицированные препараты. Выдаём документы о проведённой обработке.</p>
               </div>
             </div>
           </div>
@@ -59,12 +59,12 @@ export default function Footer() {
         <div id="contact" className="w-full px-6 py-16 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-0 border-t border-border mt-16">
           <div className="flex flex-col md:flex-row gap-2 text-center md:text-left">
             <h2 className="text-foreground font-mono text-xl font-bold">Геометрия чистоты</h2>
-            <p className="text-foreground font-mono font-normal text-base">Профессиональный клининг для вашего пространства</p>
+            <p className="text-foreground font-mono font-normal text-base">Санитарная обработка любых объектов</p>
           </div>
 
           <a href="mailto:hello@example.com">
             <button className="bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg whitespace-nowrap hover:scale-105 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-all duration-300 font-mono flex items-center gap-2">
-              Заказать уборку
+              Вызвать специалиста
               <svg
                 width="20"
                 height="20"

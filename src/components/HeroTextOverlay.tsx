@@ -15,9 +15,9 @@ export default function HeroTextOverlay() {
         ЧИСТОТЫ
       </h1>
       <p className="text-foreground font-mono text-sm md:text-base max-w-xs tracking-widest lg:text-base">
-        Профессиональный клининг
+        Дезинфекция, дезинсекция,
         <br />
-        с точностью до деталей
+        дератизация
       </p>
     </div>
   )
